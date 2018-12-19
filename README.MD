@@ -19,3 +19,4 @@
     "build" : "webpack"
 * we created greet.js and imported that module in index.js
 * run 'npm run build -- --mode development'
+* we modify greeting to getGreeting and use modern Javascript syntax
