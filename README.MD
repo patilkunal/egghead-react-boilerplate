@@ -56,3 +56,11 @@
 * Browse to localhost:8080 to see the app and any change will recompile and force browser to reload the page.
 * To update the port update dev webpack and add devServer section.
 * When debugging the app you see the compiled code rather than the original source code. Use source-map to see the original source. Add property devtool to webpack config file. You want this only in development mode.
+
+##Extending the App
+*  Support for the experimental syntax 'classProperties' isn't currently enabled. We need to install babel proposal plugin
+> npm i -D @babel/plugin-proposal-class-properties
+* Update base webpack config to add this as plugins section and run 'npm run dev' to see the compilation works fine.
+
+ 
+
