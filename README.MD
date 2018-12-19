@@ -62,5 +62,11 @@
 > npm i -D @babel/plugin-proposal-class-properties
 * Update base webpack config to add this as plugins section and run 'npm run dev' to see the compilation works fine.
 
+##Add CSS to the app 
+* To add CSS to the app, we need babel plugin parse the CSS files.
+>npm i -D css-loader style-loader
+* And update the webpack base to use this css loader
+* create styles.css and import it in index.js
+
  
 
