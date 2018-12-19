@@ -44,4 +44,10 @@
 * lets create boiler plate html for that purpose
 * create index.html in src folder with the div tag of id app. And modify HtmlWebpackPlugin in webpack config to now take the template as src/index.html to generate the final index.html
 * Now the building is manual. We can run webpack in watch mode to auto build on a change
+* We have two different runs in package.json. We can create two different webpack config based on the mode of operation (like dev and prod)
+* install webpack-merge 
+> npm i -D webpack-merge
+* Rename webpack.config.js to webpack.config.base.js and create two new files webpack.config.dev.js and webpack.config.prod.js
+* Use the merge plugin to now extend the base config to individual config type by passing object with properties to override.
+* verify by 'npm run build' and 'npm run dev' to see app.bundle.js contents
 
