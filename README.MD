@@ -31,3 +31,17 @@
 create a react app
 * install react libraries 
     >npm i -S react react-dom prop-types
+* Create App.js to render Hello World in H1 tag
+* Modify index.js to use Reach and App module to render the page
+* Babel needs react preset tot be able underdtand JSX tags
+    >npm i -D @babel/preset-react
+* Update the 'presets' in webpack config and add the new preset from above
+* Run 'npm run build' to see our app compiles fine
+* We need index.html file as entry point to our Web app. We can let webpack generate it for us
+>npm i -D html-webpack-plugin
+* update webpack config to use it. Add plugins property. And then run 'npm run build' to see generated index.html in dist folder
+* loading index.html is blank since it does not have div tag for React to write the DOM elements to.
+* lets create boiler plate html for that purpose
+* create index.html in src folder with the div tag of id app. And modify HtmlWebpackPlugin in webpack config to now take the template as src/index.html to generate the final index.html
+
+
