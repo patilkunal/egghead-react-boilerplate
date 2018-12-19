@@ -55,4 +55,4 @@
 * Update the package.json to now run webpack-dev-server instead of webpack --watch.
 * Browse to localhost:8080 to see the app and any change will recompile and force browser to reload the page.
 * To update the port update dev webpack and add devServer section.
-
+* When debugging the app you see the compiled code rather than the original source code. Use source-map to see the original source. Add property devtool to webpack config file. You want this only in development mode.
