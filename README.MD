@@ -28,7 +28,7 @@
 * add module section to webpack config to run babel loader while compiling the code.
 * >npm run build to see that now we have older version of javascript generated
 
-create a react app
+## Create a react app
 * install react libraries 
     >npm i -S react react-dom prop-types
 * Create App.js to render Hello World in H1 tag
