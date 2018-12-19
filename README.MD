@@ -50,4 +50,9 @@
 * Rename webpack.config.js to webpack.config.base.js and create two new files webpack.config.dev.js and webpack.config.prod.js
 * Use the merge plugin to now extend the base config to individual config type by passing object with properties to override.
 * verify by 'npm run build' and 'npm run dev' to see app.bundle.js contents
+* To run a webserver to serve the files install webpack-dev-server as Dev dependency using npm
+>npm i -D webpack-dev-server
+* Update the package.json to now run webpack-dev-server instead of webpack --watch.
+* Browse to localhost:8080 to see the app and any change will recompile and force browser to reload the page.
+* To update the port update dev webpack and add devServer section.
 
