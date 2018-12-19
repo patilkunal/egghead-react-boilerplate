@@ -43,5 +43,5 @@
 * loading index.html is blank since it does not have div tag for React to write the DOM elements to.
 * lets create boiler plate html for that purpose
 * create index.html in src folder with the div tag of id app. And modify HtmlWebpackPlugin in webpack config to now take the template as src/index.html to generate the final index.html
-
+* Now the building is manual. We can run webpack in watch mode to auto build on a change
 
