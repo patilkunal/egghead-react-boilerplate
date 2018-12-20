@@ -71,8 +71,8 @@
 * create styles.css and import it in index.js
 
 ## Analyze webpack bundles
-    >npm i -D webpack-bundle-analyzer
 * Add to prod webpack config
+    >npm i -D webpack-bundle-analyzer
 
 ```javascript
 const merge = require('webpack-merge')
@@ -86,7 +86,7 @@ module.exports = merge(baseConfig, {
 
 * By default it serves over http, but it can also be configured to create static report.html and the filename of report file can also be configured
 
-```JSON
+```javascript
   plugins: [new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
@@ -97,7 +97,7 @@ module.exports = merge(baseConfig, {
 ## Externalize JS files to pull from CDN 
 * Vendor JS files can be pulled from external CDN by configuration in webpack config. This is only recommended for production config
 
-```json
+```javascript
 module.exports = merge(baseConfig, {
   mode: 'production',
   plugins: [new BundleAnalyzerPlugin({
