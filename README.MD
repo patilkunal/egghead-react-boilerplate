@@ -211,6 +211,28 @@ plugins: [
 * Run the test to see that it passes
     > $ npm test
 
+## Enhancing the first test
+* To test React Application, we need to install following
+    > $ npm i -D react-testing-library jest-dom
+* Update the App.spec.js to following
 
+```javascript
+import React from 'react'
+import { render } from 'react-testing-library'
+import 'jest-dom/extend-expect'
+import 'react-testing-library/cleanup-after-each'
+import App from './App'
 
-
+describe('App', () => {
+    it('Renders without error', () => {
+      render(<App />)
+    })
+})
+````
+* The test will fail because babel running under test does not know JSX tag '<App/>' and cannot transform the tag
+* create '.babelrc' and move the options object section to the file. Check if everything work fine for 'npm run build'
+* We need few more modules. The bridge version of babel core to resolve descrepency between babel-core version 6 (which test uses) and 7 (which app uses)
+    > $ npm i -D babel-jest babel-core@bridge
+* To support dynamic loading (for our warning module) for babel when running under node, we need one more module.
+    > $ npm i -D babel-plugin-dynamic-import-node
+* Update babelrc file to load this plugin when running test. Run the test to see it passes.
