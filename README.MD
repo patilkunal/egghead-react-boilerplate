@@ -198,4 +198,19 @@ plugins: [
     ]
 ```
 
+## Setup Application testing
+* Install jest npm dev dependency
+    > $ npm i -D jest
+* Update package.json to run jest for test command
+
+```javascript
+    test: 'jest'
+```
+
+* And create our first test in src folder as App.spec.js
+* Run the test to see that it passes
+    > $ npm test
+
+
+
 
