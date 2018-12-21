@@ -181,3 +181,21 @@ module: {
          ...
       }
 ```
+
+## React lazy loading
+We have created a new Warning component and want to load the component only when it is needed. Take a look at App.js of syntax to lazy load the component and add React.Suspense tag to surround our lazily loaded component
+
+But for Babel to understand our dynamic support for React.Suspense tag, we have import babel plugin
+    > $ npm i -D @babel/plugin-syntax-dynamic-import
+
+And update plugins section in webpack.config.base.js 
+
+```javascript
+plugins: [
+    'react-hot-loader/babel',
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-syntax-dynamic-import'
+    ]
+```
+
+
